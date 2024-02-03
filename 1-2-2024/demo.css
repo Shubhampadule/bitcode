@@ -1,0 +1,30 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+
+}
+.box{
+    font-size: x-large;
+    color: white;
+    margin: auto 20px;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+   /* border: 2px solid red; */
+   border-width: 2px 3px 4px 5px;
+   border-style: solid dotted dashed double;
+
+   border-color: red pink yellow black ;
+}
+.box2{
+    margin: 20px 40px;
+    width: 100px;
+    height: 100px;
+    background-color: hsl(60,100% , 50%);
+    box-sizing: border-box;
+    /* visibility: hidden; */
+    /* display: none; */
+    
+}
