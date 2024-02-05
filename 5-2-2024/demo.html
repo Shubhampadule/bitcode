@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 200px;
+        width: 200px;
+        border: 10px dotted green;
+        background-color: sienna;
+        padding: 10px;
+        /* background-clip: border-box; */
+        /* background-clip: content-box; */
+        background-clip: padding-box;
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <div id="d1">this is div</div>
+    <div id="d2"></div>
+    <input type="button" value="click" onclick="fun()">
+    <script>
+         d1=document.getElementById("d1");
+        function fun(){
+            d1.innerHTML="<br> <b><i>hello shubham!!</b>" 
+        }
+        // window.document.write("hello world<br>");
+        // window.document.write("javascript!!");
+       
+        // document.write(d1);
+        console.log(d1.innerHTML);
+        // d1.innerHTML+="<br> <b><i>hello fromr javascript!!</b>"
+        //     d1=document.getElementById("d2");
+        //     console.log(d1.innerHTML);
+        //     d1.innerHTML+="<br> <b><i>hello shubham!!</b>"
+
+
+    </script>
+</body>
+</html>
