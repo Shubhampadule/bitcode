@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #textfname ,#textLname {
+        border: 2px solid black;
+        padding: 5px;
+        margin: 10px;
+    }
+    .container{
+        margin: 50px 50px 50px 500px;
+        height: 500px;
+        width: 500px;
+        border: 2px solid black;
+    }
+    .btn{
+        margin:20px 20px 20px 100px ;
+        height: 50px;
+        width: 200px;
+        border-radius: 50px;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <Div class="container">
+        First Name <input type="text" id="textfname" placeholder="Enter Your First name"><br>
+        Last Name <input type="text" id="textLname" placeholder="Enter your Last Name"><br>
+        <input class="btn" type="button" value="click" onclick="fun()">
+    </Div>
+    <div id="display"></div>
+    <script>
+       
+       function fun() {
+            var firstName = document.getElementById("textfname").value;
+            var lastName = document.getElementById("textLname").value;
+            var fullName = firstName + " " + lastName;
+            console.log("display");
+            document.getElementById("display").innerText = "Full Name: " + fullName;
+           
+        }
+    </script>
+</body>
+</html>
+

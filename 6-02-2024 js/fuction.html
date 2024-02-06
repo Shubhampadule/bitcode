@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        function funAdd(a,b){
+            // sum=a+b; //sum is global scope 
+            var sum=a+b; //var and lwt block level scope//local
+            document.write("<br>sum="+sum);
+            return sum;
+        }
+
+        var output=funAdd(a,20);
+        //funAdd(2,3);
+        //funAdd("a","b")
+
+        document.write("<br>outside="+output);
+        document.write("<br>ouside="+funAdd(2,2));
+        console.log(funAdd(3,3));
+    </script>
+</body>
+</html>

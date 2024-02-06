@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <input type="button" value="click" onclick="fun()">
+    <script>
+        var d1=document.getElementById("d1");
+        function fun(){
+            console.log(d1.innerHTML);
+            console.log(d1.textContent);
+
+        d1.innerHTML+="<h4>frome the script</h4>";
+        d1.textContent+="<h4>frome the script</h4>";
+        console.log(d1.textContent);
+        }
+    </script>
+</body>
+</html>

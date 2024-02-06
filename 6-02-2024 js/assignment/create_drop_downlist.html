@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown-html</title>
+</head>
+<style>
+    
+</style>
+<body>
+    
+    color: <select name="color" id="c1" >
+        <option >select</option>
+        <option >red</option>
+        <option >green</option>
+        <option >black</option>
+        <option >yellow</option>
+    </select>
+    <br>
+    <input type="button" value="click" onclick="fun()">
+
+    <script>
+       function  fun(){
+
+            var str=document.getElementById("c1").value;
+            document.body.style.backgroundColor=str;
+       }
+    </script>
+</body>
+</html>
