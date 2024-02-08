@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    num1: <input type="text" name="num" id="txtNum1" /> <br />
+    <input type="button" value="vowel or not" onclick="funvowl()" /><br />
+    <p id="p1"></p>
+<script>
+    function funvowl(){
+        var ch = document.getElementById("txtNum1").value;
+        var p1 = document.getElementById("p1");
+        switch(ch){
+            case 'a': p1.innerHTML="vowel";break;
+            case 'e': p1.innerHTML="vowel";break;
+            case 'i': p1.innerHTML="vowel";break;
+            case 'o': p1.innerHTML="vowel";break;
+            case 'u': p1.innerHTML="vowel";break;
+            default : p1.innerHTML="consonant";break;
+        }
+    }
+</script>
+</body>
+</html>

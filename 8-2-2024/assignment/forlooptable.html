@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Table Generator</title>
+  </head>
+  <body>
+    Enter the sum: <input type="text" name="sum" id="txtSum" /> <br />
+    <input
+      type="button"
+      value="Generate Table"
+      onclick="generateTable()"
+    /><br />
+    <h2>Multiplication Table:</h2>
+    <div id="multiplicationTable"></div>
+
+    <script>
+      function generateTable() {
+        var sum = parseInt(document.getElementById("txtSum").value);
+        var tableHTML = "<p>";
+
+        for (var i = 1; i <= 10; i++) {
+          var product = sum * i;
+          tableHTML += sum + " * " + i + " = " + product + "<br>";
+        }
+
+        tableHTML += "</p>";
+        document.getElementById("multiplicationTable").innerHTML = tableHTML;
+      }
+    </script>
+  </body>
+</html>

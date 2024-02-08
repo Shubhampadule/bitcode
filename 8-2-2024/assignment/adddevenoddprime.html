@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even odd prime</title>
+</head>
+<body>
+ num1:   <input type="text" name="num" id="txtNum1" /> <br/>
+ num2:   <input type="text" name="num" id="txtNum2" /> <br/>
+ <input type="button" value="even number" onclick="funeven()" />
+ <input type="button" value="odd number" onclick="funodd()" />
+ <input type="button" value="prime number" onclick="funprime()" />
+ <h2 id="h1"></h2>
+
+ <script>
+    h1 = document.getElementById("h1");
+
+    function funeven() {
+        let start = parseInt(document.getElementById("txtNum1").value);
+        let end = parseInt(document.getElementById("txtNum2").value);
+        let result = "";
+
+        for (let i = start; i <= end; i++) {
+            if (i % 2 === 0) {
+                result += i + " ";
+            }
+        }
+
+        h1.innerHTML = "even number: " + result;
+    }
+
+    function funodd() {
+        let start = parseInt(document.getElementById("txtNum1").value);
+        let end = parseInt(document.getElementById("txtNum2").value);
+        let result = "";
+
+        for (let i = start; i <= end; i++) {
+            if (i % 2 !== 0) {
+                result += i + " ";
+            }
+        }
+
+        h1.innerHTML = "odd number: " + result;
+    }
+
+    function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+    function funprime(){
+        
+        let start = parseInt(document.getElementById("txtNum1").value);
+        let end = parseInt(document.getElementById("txtNum2").value);
+        let result = "";
+        for (let i = start; i <= end; i++) {
+        if (isPrime(i)) {
+            result += i + " ";
+        }
+        }
+        document.getElementById("h1").innerHTML = "Prime Numbers: " + result;
+    }
+ </script>
+</body>
+</html>

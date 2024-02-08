@@ -1,0 +1,66 @@
+<html>
+  <body>
+    Num1:<input type="text" id="txtNum1"><br>
+    <input type="button" value="EvenOdd" onclick="funEvenOdd()">
+    <input type="button" value="Percentage" onclick="funPerClass()">
+    <input type="button" value="Vowel" onclick="funVowel()">
+    <input type="button" value="All Even" onclick="funEven()">
+    <p id="p1"></p>
+    <script>
+      p1=document.getElementById("p1");
+      function funEvenOdd(){
+        var num=parseInt(document.getElementById("txtNum1").value);
+      if(num%2==0){
+       p1.innerHTML="<br>Even number!!";
+      }
+      else{
+        p1.innerHTML="<br>Odd number";
+      }
+    }
+    function funPerClass(){
+      var per=parseInt(document.getElementById("txtNum1").value);
+      if(per>65){
+        p1.innerHTML="firstClass+Distn";
+      }
+      else if(per>=60 && per<=65){
+        p1.innerHTML="firstClass";
+      }
+      else if(per>=58 && per<60){
+        p1.innerHTML="Higher second class";
+      }
+      else{
+        p1.innerHTML="Pass Class";
+      }
+    }
+    function funVowel(){
+      var ch=document.getElementById("txtNum1").value;
+    /*  switch(ch){
+        case 'a':p1.innerHTML="vowel";break;
+        case 'e':p1.innerHTML="vowel";break;
+        case 'i':p1.innerHTML="vowel";break;
+        case 'o':p1.innerHTML="vowel";break;
+        case 'u':p1.innerHTML="vowel";break;
+        default:p1.innerHTML="consonant";break;
+
+      }
+*/
+      if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+        p1.innerHTML="vowel";
+      }
+      else{
+        p1.innerHTML="consonant";
+      }
+    }
+    function funEven(){
+      str="";
+      for(i=1;i<=20;i++){
+        if(i%2==0){
+          str+="<br>"+i;
+        }
+       
+      }
+      p1.innerHTML=str;
+    }
+    </script>
+  </body>
+</html>
