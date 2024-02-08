@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    num1: <input type="text" name="num" id="txtNum1" /> <br />
+    num2: <input type="text" name="num" id="txtNum2" /> <br />
+    <input type="button" value="add" onclick="funadd()" /><br />
+    <input type="button" value="minus" onclick="funminus()" /><br />
+    <input type="button" value="multiplication" onclick="funmultiplication()" /><br />
+    <input type="button" value="division" onclick="fundivid()" /><br />
+    <input type="button" value="mod" onclick="funmod()" /><br />
+    result: <input type="text" id="txtResult" readonly />
+    <p id="p1"></p>
+
+    <script>
+        p1 = document.getElementById("p1");
+
+        function funadd() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var sum = parseInt(num1) + parseInt(num2);
+            document.getElementById("txtResult").value = sum;
+            p1.innerHTML = "<b>Sum:</b> " + sum;
+        }
+
+        function funmultiplication() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var product = parseInt(num1) * parseInt(num2);
+            document.getElementById("txtResult").value = product;
+            p1.innerHTML = "<b>Product:</b> " + product;
+        }
+
+        function funminus() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var difference = parseInt(num1) - parseInt(num2);
+            document.getElementById("txtResult").value = difference;
+            p1.innerHTML = "<b>Difference:</b> " + difference;
+        }
+
+        function fundivid() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var quotient = parseInt(num1) / parseInt(num2);
+            document.getElementById("txtResult").value = quotient;
+            p1.innerHTML = "<b>Quotient:</b> " + quotient;
+        }
+
+        function funmod() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var modulus = parseInt(num1) % parseInt(num2);
+            document.getElementById("txtResult").value = modulus;
+            p1.innerHTML = "<b>Modulus:</b> " + modulus;
+        }
+    </script>
+    
+</body>
+</html>

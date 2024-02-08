@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="d1">hellow</div> 
+   <input type="button" value="click" onclick="funClick()">
+   <script>
+    var div=window.document.getElementById("d1");
+    function funClick(){
+    console.log(div.innerHTML);
+    div.innerHTML+="<b>from script</b>";
+    console.log(div.textContent)
+    div.textContent+="<b>from script</b>";
+}
+
+    alert("hello");
+    var res=confirm("do you want to del");
+    var res=prompt("enter your name:","hello")
+    console.log(res);
+   </script>
+</body>
+</html>

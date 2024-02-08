@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    
+    num1: <input type="text" name="num" id="txtNum1" /> <br />
+    num1: <input type="text" name="num" id="txtNum2" /> <br />
+    <input type="button" value="add" onclick="funAdd()" /><br />
+    result: <input type="text" id="txtResult" readonly />
+    <p id="p1"></p>
+   
+   
+   
+   
+   
+   <script>
+        p1 = document.getElementById("p1");
+        function funAdd() {
+            var num1 = document.getElementById("txtNum1").value;
+            var num2 = document.getElementById("txtNum2").value;
+            var sum = parseInt(num1) + parseInt(num2);
+            // var sum=parseInt(num1)*parseInt(num2);
+            console.log(sum);
+            // document.write(sum);
+            document.getElementById("txtResult").value = sum;
+            p1.innerHtml = "<b>Sum=</b>" + sum;
+        }
+    </script>
+</body>
+
+</html>
