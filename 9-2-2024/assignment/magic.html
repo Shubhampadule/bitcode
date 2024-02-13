@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        Start:<input type="text" id="txtNum"><br>
+       
+        <input type="button" value="Click" onclick="funClick()">
+        <div id="d1"></div>
+        <script>
+            var d1=document.getElementById("d1");
+            function funClick(){
+              var num=document.getElementById("txtNum").value;
+             digitSep(num);  
+               
+            }
+            function digitSep(num){
+                var rem=0;
+              var sum=0;
+              while(num>0){
+                rem=num%10;
+                sum=sum+rem;
+                num=parseInt(num/10);
+              }
+              console.log(sum);
+              if(sum>9){
+               digitSep(sum);
+              }
+              else{
+                if(sum==1){
+                    console.log("magic number!!");
+                }
+                else{
+                    console.log("Not a magic number!!");
+                }
+              }
+            }
+             </script>
+    </body>
+
+</html>
