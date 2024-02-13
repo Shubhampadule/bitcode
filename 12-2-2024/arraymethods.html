@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="d1"></div>
+    <ul id="list"></ul>
+    <script>
+      var d1 = document.getElementById("d1");
+      var list1 = document.getElementById("list");
+
+      // Array
+      var colors = ["red", "green", "pink", "black"];
+      document.write("<br>lenght=" + colors.length);
+      document.write("<br>tostring=" + colors.toStrig);
+      document.write("<br>join=" + colors.join("-"));
+      // document.write("<br>reverse="+colors.reverse());
+      // document.write("<br>sort="+colors.sort());
+      document.write("<br>slice=" + colors.slice(1));
+      document.write("<br>slice=" + colors.slice(1, 3)); //exclude
+      // splice insert and delete both
+      var x = colors.splice(1, 0, "golden", silver);
+      console.log(x);
+      document.write("<br>splice(1,0,'g,s')=" + colors);
+
+
+    //   stack Lifo
+    var y=colors.push("newColor");
+    console.log("y"+y)//new lenght
+    document.write("<br>push="+colors);
+    var y=colors.pop();
+    console.log("y"+y)//deleted element
+    document.write("<br>pop="+colors);
+
+    // queue fifo
+    var y=colors.unshift("newColor");
+    console.log("y"+y)//unishift
+    document.write("<br>unshift="+colors);
+    var y=colors.shift();
+    console.log("y"+y)/shift
+    document.write("<br>shift="+colors);
+    </script>
+  </body>
+</html>

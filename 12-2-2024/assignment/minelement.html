@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display smallest element</title>
+</head>
+<body>
+    <script>
+        // Array
+        var arr = ["1", "2", "10", "20"];
+
+        // Initialize min with the first element
+        var min = parseInt(arr[0], 10);
+
+        // Find the smallest element
+        for (var i = 0; i < arr.length; i++) {
+            
+            if (parseInt(arr[i], 10) < min) {
+                min = parseInt(arr[i], 10);
+            }
+        }
+
+        console.log("Smallest element:", min);
+
+        document.write("Smallest element: " + min);
+    </script>
+</body>
+</html>

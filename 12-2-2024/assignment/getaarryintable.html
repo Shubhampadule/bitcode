@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table of Array</title>
+    <style>
+      body {
+        border: 2px solid black; /* Add border to the body */
+      }
+
+      table {
+        height: 50%;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #eee5e5;
+        text-align: left;
+        padding: 8px;
+        color: red;
+        font-size: larger;
+        font-style: bold;
+      }
+
+      th {
+        background-color: #483a3a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1"></div>
+    <table id="table"></table>
+    <script>
+      var d1 = document.getElementById("d1");
+      var table = document.getElementById("table");
+
+      // Array
+      var colors = ["red", "green", "pink", "black", "white", "yellow"];
+
+      var str = "<tr><th>Index</th><th>Value</th></tr>";
+
+      for (var i = 0; i < colors.length; i++) {
+        str += "<tr><td>" + i + "</td><td>" + colors[i] + "</td></tr>";
+      }
+
+     
+      table.innerHTML = str;
+    </script>
+  </body>
+</html>
